@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="icon" href="./images/logo.png">
+  <title>Mini News</title>
+</head>
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<nav class="bg-white sticky top-0 z-50 shadow-sm border-b">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center h-16">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+<img src="./images/logo.png" alt="Mini News Logo"
+       class="h-10 w-10 object-contain" />
+               <span class="text-2xl font-extrabold text-blue-600">MiniNews</span>
+        <span class="hidden sm:block text-xs text-blue-500"><b>Publishing</b></span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="./Home.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+        <a href="./about.html" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
+        <a href="./Overview.html" class="text-gray-700 hover:text-blue-600 transition">Overview</a>
+        <a href="./Contactus.html" class="text-gray-700 hover:text-blue-600 transition">Contact Us</a>
+      </div>
+
+      <!-- Actions -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="#" class="text-gray-600 hover:text-blue-600 text-sm font-medium">
+          Sign In
+        </a>
+        <a href="#"
+           class="px-5 py-2 text-sm rounded-md font-semibold text-white
+                  bg-blue-600 hover:bg-blue-700 transition shadow">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-2xl text-gray-700">
+        ☰
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 pb-4">
+    <a href="./Home.html" class="block py-2 text-gray-700">Home</a>
+    <a href="./about.html" class="block py-2 text-gray-700">About Us</a>
+    <a href="./Overview.html" class="block py-2 text-gray-700">Overview</a>
+    <a href="./Contactus.html" class="block py-2 text-gray-700">Contact Us</a>
+    <a href="#" class="block py-2 text-gray-700">Sign In</a>
+
+    <a href="#" class="block mt-3 text-center py-2 rounded-md font-semibold text-white bg-blue-600">
+      Get Started
+    </a>
+  </div>
+</nav>
+
+
+
+
+<!-- Hero Section with Background Image -->
+<section class="relative h-[85vh] flex items-center justify-center">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-[url('./images/banner.jpg')] bg-cover bg-center"></div>
+
+  <!-- Black Overlay -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-6 max-w-3xl">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white">
+      Mini News Publishing
+    </h1>
+
+    <p class="mt-5 text-lg text-gray-200">
+      A modern platform to publish, manage, and explore news
+      with speed, accuracy, and simplicity.
+    </p>
+
+    <!-- Buttons -->
+    <div class="mt-8 flex justify-center gap-4">
+      <a href="#"
+         class="px-6 py-3 rounded-md bg-blue-600 text-white font-semibold
+                hover:bg-blue-700 transition">
+        Get Started
+      </a>
+
+      <a href="#"
+         class="px-6 py-3 rounded-md border border-white text-white font-semibold
+                hover:bg-white hover:text-black transition">
+        Explore News
+      </a>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JS -->
+<script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
+</body>
+</html>
