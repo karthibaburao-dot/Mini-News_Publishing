@@ -1,160 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
 <link rel="icon" href="./images/logo.png">
-  <title>Mini News</title>
-</head>
-<body class="bg-gray-100">
+<title>Mini News Publishing</title>
 
-<!-- Navbar -->
-<nav class="bg-white sticky top-0 z-50 shadow-sm border-b">
+<style>
+  .glass {
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.7);
+  }
+
+  .hero-bg {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url('./images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+</style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+<!-- 🔥 Glass Navbar -->
+<nav class="glass fixed w-full z-50 shadow-md">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex justify-between items-center h-16">
 
       <!-- Logo -->
-      <div class="flex items-center gap-2">
-<img src="./images/logo.png" alt="Mini News Logo"
-       class="h-10 w-10 object-contain" />
-               <span class="text-2xl font-extrabold text-blue-600">MiniNews</span>
-        <span class="hidden sm:block text-xs text-blue-500"><b>Publishing</b></span>
+      <div class="flex items-center gap-3">
+        <img src="./images/logo.png" class="h-10 w-10">
+        <h1 class="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          MiniNews
+        </h1>
       </div>
 
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-        <a href="./Home.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-        <a href="./about.html" class="text-gray-700 hover:text-blue-600 transition">About Us</a>
-        <a href="./Overview.html" class="text-gray-700 hover:text-blue-600 transition">Overview</a>
-        <a href="./Contactus.html" class="text-gray-700 hover:text-blue-600 transition">Contact Us</a>
+      <!-- Menu -->
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="#" class="hover:text-blue-600 transition">Home</a>
+        <a href="./about.html" class="hover:text-blue-600 transition">About</a>
+        <a href="./Overview.html" class="hover:text-blue-600 transition">Overview</a>
+        <a href="./Contactus.html" class="hover:text-blue-600 transition">Contact</a>
       </div>
 
-      <!-- Actions -->
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="#" class="text-gray-600 hover:text-blue-600 text-sm font-medium">
-          Sign In
-        </a>
-        <a href="#"
-           class="px-5 py-2 text-sm rounded-md font-semibold text-white
-                  bg-blue-600 hover:bg-blue-700 transition shadow">
-          Get Started
-        </a>
-      </div>
+      <!-- Button -->
+      <a href="#"
+         class="hidden md:inline-block px-6 py-2 rounded-full text-white font-semibold
+                bg-gradient-to-r from-blue-600 to-purple-600
+                hover:scale-105 transition duration-300 shadow-lg">
+        Get Started
+      </a>
 
-      <!-- Mobile Menu Button -->
-      <button id="menuBtn" class="md:hidden text-2xl text-gray-700">
-        ☰
-      </button>
+      <!-- Mobile -->
+      <button id="menuBtn" class="md:hidden text-2xl">☰</button>
     </div>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 pb-4">
-    <a href="#" class="block py-2 text-gray-700">Home</a>
-    <a href="#" class="block py-2 text-gray-700">About Us</a>
-    <a href="#" class="block py-2 text-gray-700">Overview</a>
-    <a href="#" class="block py-2 text-gray-700">Contact Us</a>
-    <a href="#" class="block py-2 text-gray-700">Sign In</a>
-
-    <a href="#" class="block mt-3 text-center py-2 rounded-md font-semibold text-white bg-blue-600">
-      Get Started
-    </a>
+  <div id="mobileMenu" class="hidden md:hidden px-6 pb-4">
+    <a href="#" class="block py-2">Home</a>
+    <a href="#" class="block py-2">About</a>
+    <a href="#" class="block py-2">Overview</a>
+    <a href="#" class="block py-2">Contact</a>
   </div>
 </nav>
 
 
+<!-- 🌟 Hero Section -->
+<section class="hero-bg h-screen flex items-center justify-center text-center text-white px-6">
+  <div class="max-w-3xl">
+    <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+      Welcome to <span class="text-blue-400">Mini News Publishing</span>
+    </h1>
 
-
-
-<!-- Home Section -->
-<section class="bg-gradient-to-br from-blue-50 to-white py-20">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
-    <!-- Text Content -->
-    <div>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
-        Mini News <span class="text-blue-600">Publishing</span>
-      </h1>
-
-      <p class="mt-6 text-gray-600 text-lg">
-        Mini News Publishing is a web-based platform designed to publish, manage,
-        and deliver news articles efficiently. It provides users with quick access
-        to the latest updates across multiple categories in a simple and modern interface.
-      </p>
-
-      <!-- Buttons -->
-      <div class="mt-8 flex gap-4">
-        <a href="#"
-           class="px-6 py-3 rounded-md text-white font-semibold
-                  bg-blue-600 hover:bg-blue-700 transition">
-          Get Started
-        </a>
-
-        <a href="#"
-           class="px-6 py-3 rounded-md font-semibold text-blue-600
-                  border border-blue-600 hover:bg-blue-50 transition">
-          Explore News
-        </a>
-      </div>
-    </div>
-
-    <!-- Image / Illustration -->
-    <div class="hidden md:block">
-      <img src="./images/banner.jpg"
-           alt="Mini News Publishing"
-           class="w-full max-w-md mx-auto">
-    </div>
-
-  </div>
-</section>
-
-
-
-<!-- 2 -->
-<section class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-gray-800">
-      About Mini News Publishing
-    </h2>
-    <p class="mt-6 text-gray-600 max-w-3xl mx-auto">
-      Mini News Publishing is a web-based platform that allows administrators
-      and publishers to create, manage, and distribute news articles efficiently.
-      Users can easily access categorized news through a simple interface.
+    <p class="mt-6 text-lg text-gray-200">
+      A powerful digital platform to create, manage and explore news articles
+      with speed, simplicity and style.
     </p>
+
+    <div class="mt-10 flex justify-center gap-6 flex-wrap">
+      <a href="./register.html"
+         class="px-8 py-3 rounded-full font-semibold
+                bg-gradient-to-r from-blue-600 to-purple-600
+                hover:scale-110 transition duration-300 shadow-xl">
+        Get Started
+      </a>
+
+      <a href="./about.html"
+         class="px-8 py-3 rounded-full font-semibold border border-white
+                hover:bg-white hover:text-black transition duration-300">
+        Explore News
+      </a>
+    </div>
   </div>
 </section>
 
 
-<!-- 3 -->
+<!-- ✨ About Section -->
+<section class="py-20 bg-white text-center">
+  <h2 class="text-4xl font-bold mb-6">About Mini News</h2>
+  <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+    Mini News Publishing allows administrators and publishers to
+    publish categorized articles and manage digital content efficiently.
+  </p>
+</section>
+
+
+<!-- 🚀 Categories Section -->
 <section class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
-      News Categories
-    </h2>
+    <h2 class="text-4xl font-bold text-center mb-14">News Categories</h2>
 
-    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="grid md:grid-cols-4 gap-10">
 
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-blue-600">World</h3>
-        <p class="mt-3 text-gray-600">Latest international news and updates.</p>
+      <div class="p-8 bg-white rounded-2xl shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 text-center">
+        <h3 class="text-2xl font-bold text-blue-600">World</h3>
+        <p class="mt-4 text-gray-600">Global breaking news and updates.</p>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-blue-600">Technology</h3>
-        <p class="mt-3 text-gray-600">Trends, innovations, and tech updates.</p>
+      <div class="p-8 bg-white rounded-2xl shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 text-center">
+        <h3 class="text-2xl font-bold text-purple-600">Technology</h3>
+        <p class="mt-4 text-gray-600">Latest tech trends and innovations.</p>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-blue-600">Sports</h3>
-        <p class="mt-3 text-gray-600">Live scores, match highlights, and news.</p>
+      <div class="p-8 bg-white rounded-2xl shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 text-center">
+        <h3 class="text-2xl font-bold text-green-600">Sports</h3>
+        <p class="mt-4 text-gray-600">Match highlights and live updates.</p>
       </div>
 
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-blue-600">Business</h3>
-        <p class="mt-3 text-gray-600">Market trends and financial insights.</p>
+      <div class="p-8 bg-white rounded-2xl shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-300 text-center">
+        <h3 class="text-2xl font-bold text-red-600">Business</h3>
+        <p class="mt-4 text-gray-600">Market insights and finance news.</p>
       </div>
 
     </div>
@@ -162,212 +141,32 @@
 </section>
 
 
-<!-- 4 -->
+<!-- 🔵 Call To Action -->
+<section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center">
+  <h2 class="text-4xl font-bold">Start Publishing Today</h2>
+  <p class="mt-4 text-lg">Join thousands of readers and publishers.</p>
 
-<section class="py-20 bg-blue-600 text-white text-center">
-  <h2 class="text-3xl font-bold">
-    Start Publishing News Today
-  </h2>
-  <p class="mt-4 text-blue-100">
-    Join Mini News Publishing and share information with the world.
-  </p>
-  <a href="#" class="inline-block mt-8 px-8 py-3 bg-white text-blue-600 rounded-md font-semibold">
+  <a href="#"
+     class="inline-block mt-8 px-10 py-3 bg-white text-blue-600
+            rounded-full font-bold hover:scale-110 transition duration-300">
     Get Started Now
   </a>
 </section>
 
 
-
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-300">
-  <div class="max-w-7xl mx-auto px-6 py-12">
-
-    <!-- Top Footer -->
-    <div class="grid gap-10 md:grid-cols-4">
-
-      <!-- Brand -->
-      <div>
-        <div class="flex items-center gap-3">
-          <img src="images/logo.png" alt="Mini News Logo" class="h-10 w-10" />
-          <h2 class="text-xl font-bold text-white">
-            Mini News Publishing
-          </h2>
-        </div>
-        <p class="mt-4 text-sm text-gray-400">
-          A modern digital platform for publishing and exploring news
-          with accuracy, speed, and simplicity.
-        </p>
-      </div>
-
-      <!-- Quick Links -->
-      <div>
-        <h3 class="text-lg font-semibold text-white mb-4">
-          Quick Links
-        </h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-white">Home</a></li>
-          <li><a href="#" class="hover:text-white">About Us</a></li>
-          <li><a href="#" class="hover:text-white">Overview</a></li>
-          <li><a href="#" class="hover:text-white">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Categories -->
-      <div>
-        <h3 class="text-lg font-semibold text-white mb-4">
-          Categories
-        </h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-white">World</a></li>
-          <li><a href="#" class="hover:text-white">Technology</a></li>
-          <li><a href="#" class="hover:text-white">Sports</a></li>
-          <li><a href="#" class="hover:text-white">Business</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <h3 class="text-lg font-semibold text-white mb-4">
-          Contact
-        </h3>
-        <ul class="space-y-2 text-sm text-gray-400">
-          <li>Email: karthibaburao@gmail.com</li>
-          <li>Phone: +91 XXXXX XXXXX</li>
-          <li>Location: India</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Bottom Footer -->
-    <div class="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-400">
-      © 2026 Mini News Publishing. All rights reserved.
-    </div>
-
-  </div>
+<!-- 🌙 Footer -->
+<footer class="bg-gray-900 text-gray-400 py-12 text-center">
+  <h2 class="text-2xl font-bold text-white">Mini News Publishing</h2>
+  <p class="mt-4">© 2026 All Rights Reserved</p>
 </footer>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- JS -->
 <script>
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("mobileMenu");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("mobileMenu");
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
 </script>
 
 </body>
